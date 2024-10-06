@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Room {
-    private String name; // rummets namn t.ex bedroom
-    private int window; // hur många fönster 1,2,3 osv
+    private String name;
+    private int window;
     private People people;
     private List<Detector> detectors;
 

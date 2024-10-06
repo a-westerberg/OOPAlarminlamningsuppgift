@@ -41,7 +41,7 @@ public class Smokedetector extends Detector implements DetectorInterface{
         System.out.println(getName() + " larmar av");
 
         if(getSprinkler() != null)  {
-            getSprinkler().resetSprinkler();    //Stänger av sprinkler med metod från sprinkler klass.
+            getSprinkler().resetSprinkler();
         }
     }
     //------------------------------------Getter/Setter----------------------------------------------------------//

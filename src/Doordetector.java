@@ -28,7 +28,7 @@ public class Doordetector extends Detector implements DetectorInterface, Keypad{
         setActive(true);
     }
 
-    @Override       // denna känns lite onödig när jag redan har 2 metoder nedan för att slå på och stänga av.
+    @Override
     public void alarmSwitch() {
         if(isActive()){
             setActive(false);
@@ -42,20 +42,20 @@ public class Doordetector extends Detector implements DetectorInterface, Keypad{
     @Override
     public void alarmOn() {
         if(isActive()){
-            System.out.println("Alarmet är redan påslaget.");
+            System.out.println(getName() + " är redan påslaget.");
         }else{
             setActive(true);
-            System.out.println("Alarmet startar.....");
+            System.out.println(getName() + " startar.....");
         }
     }
 
     @Override
     public void alarmOff() {
         if(!isActive()){
-            System.out.println("Alarmet är redan avslaget.");
+            System.out.println(getName() + " är redan avslaget.");
         }else{
             setActive(false);
-            System.out.println("Alarmet stänger av.....");
+            System.out.println(getName() + " stänger av.....");
         }
     }
 
