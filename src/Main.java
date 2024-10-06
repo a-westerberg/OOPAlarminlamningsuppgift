@@ -93,6 +93,7 @@ public class Main {
     for(Detector detector : detectors){
         centralunit.addDetector(detector);
     }
+
     // //------------------------------------Respektive-detektorer-till-sina-rum-----------------------------------------------------------//
     // Garage
     garage.addRoomDetector(garageSmoke);    garage.addRoomDetector(garageWindow);   garage.addRoomDetector(garageDoor);

@@ -32,10 +32,10 @@ public class Doordetector extends Detector implements DetectorInterface, Keypad{
     public void alarmSwitch() {
         if(isActive()){
             setActive(false);
-            System.out.println("Alarmet är nu avaktiverat.");
+            System.out.println(getName() + "  är nu avaktiverat.");
         }else {
             setActive(true);
-            System.out.println("Alarmet är nu aktiverat.");
+            System.out.println(getName() + " är nu aktiverat.");
         }
     }
 

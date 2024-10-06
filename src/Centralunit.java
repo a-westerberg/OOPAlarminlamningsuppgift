@@ -345,6 +345,7 @@ public class Centralunit {
             System.out.println("3. House Inf0");
             System.out.println("4. Stäng av centralenheten.");
             System.out.print("Välj ett alternativ: ");
+
             String menuChoice = scanner.nextLine();
             System.out.println();
 
@@ -359,6 +360,7 @@ public class Centralunit {
                     System.out.println("6. Keypad till dörrdetektor.");
                     System.out.println("7. Gå tillbaka.");
                     System.out.print("Välj ett alternativ: ");
+
                     String menuChoice1 = scanner.nextLine();
                     System.out.println();
 
@@ -387,6 +389,42 @@ public class Centralunit {
                             deactivateSprinkler();
                             break;
                         case "6":       // Keypad switch?
+                            System.out.println("--------------Keypad--------------");
+                            System.out.println("1. Alarm Switch.");
+                            System.out.println("2. Alarm On.");
+                            System.out.println("3. Alarm Off.");
+                            System.out.println("4. Gå tillbaka.");
+                            System.out.print("Välj ett alternativ: ");
+
+                            String menuChoice3 = scanner.nextLine();
+                            System.out.println();
+                                switch (menuChoice3){
+                                    case "1":
+                                        for(Detector detector : detectors){
+                                            if(detector instanceof Doordetector){
+                                                detector.alarmSwitch();
+                                            }
+                                        }
+                                        break;
+                                    case "2":
+                                        for(Detector detector : detectors){
+                                            if(detector instanceof Doordetector){
+                                                detector.alarmOn();
+                                            }
+                                        }
+                                        break;
+                                    case "3":
+                                        for(Detector detector : detectors){
+                                            if(detector instanceof Doordetector){
+                                                detector.alarmOff();
+                                            }
+                                        }
+                                        break;
+                                    case "4": // Gå tillbaka
+                                        break;
+                                    default:
+                                        System.out.println("Ogiltigt val, försök igen.");
+                                }
 
                             break;
                         case "7":        // gå tillbaka.
@@ -407,6 +445,7 @@ public class Centralunit {
                     System.out.println("7. Status av simulation.");
                     System.out.println("8. Gå tillbaka.");
                     System.out.print("Välj ett alternativ: ");
+
                     String menuChoice2 = scanner.nextLine();
                     System.out.println();
 
